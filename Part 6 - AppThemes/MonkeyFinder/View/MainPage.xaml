@@ -22,7 +22,7 @@
                 <CollectionView
                     ItemsSource="{Binding Monkeys}"
                     SelectionMode="None">
-                    <!--<CollectionView.EmptyView>
+                    <CollectionView.EmptyView>
                         <StackLayout Padding="100">
                             <Image
                                 HorizontalOptions="Center"
@@ -33,12 +33,12 @@
                         </StackLayout>
                     </CollectionView.EmptyView>
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout  Orientation="Horizontal" Span="3"/>
-                    </CollectionView.ItemsLayout>-->
+                        <GridItemsLayout  Orientation="Horizontal" Span="5"/>
+                    </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Monkey">
                             <Grid Padding="10">
-                                <Frame HeightRequest="125" Style="{StaticResource CardView}">
+                                <Frame HeightRequest="195" Style="{StaticResource CardView}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer 
                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MonkeysViewModel}}, Path=GoToDetailsCommand}"
